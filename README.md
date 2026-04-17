@@ -1,17 +1,16 @@
-# bug
+# Reproducable MRE for Google Maps Web Style Bug
 
-A new Flutter project.
+# Steps to run 
 
-## Getting Started
+1. Update with a valid API key the google maps link on the index.html file
 
-This project is a starting point for a Flutter application.
+```html
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=[GCP_API_KEY]&libraries=drawing,marker,visualization"></script>
+```
 
-A few resources to get you started if this is your first Flutter project:
+Replace `[GCP_API_KEY]` with a valid key
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+2. Running the app on web on `google_maps_flutter: 2.14.2` will show the map with the dark mode custom colors, and if run with any version above for example `google_maps_flutter: 2.15.0` will show the map with the default colors. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This bug is still happening in the latest version as of writing this which is `google_maps_flutter: 2.17.0`
