@@ -16,7 +16,7 @@ Replace `[GCP_API_KEY]` with a valid key
 This bug is still happening in the latest version as of writing this which is `google_maps_flutter: 2.17.0`
 
 
-3. Run the app
+3. Run the app on web
 
 ```bash
 flutter run -d chrome
